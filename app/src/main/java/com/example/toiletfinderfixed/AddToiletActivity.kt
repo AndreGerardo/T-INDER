@@ -28,7 +28,7 @@ class AddToiletActivity: AppCompatActivity() {
     private lateinit var genderRadioGrp : RadioGroup
     private lateinit var tipeRadioGrp : RadioGroup
     private lateinit var currentLatLng: Location
-    private var ttype  = ""
+    private var tipe  = ""
     private var gender  = ""
 
     //Location
@@ -40,7 +40,7 @@ class AddToiletActivity: AppCompatActivity() {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
-        tname = findViewById(R.id.addNamaToilet)
+        tname = findViewById(R.id.addToiletName)
         topenTime = findViewById(R.id.addWaktuBuka)
         tcloseTime = findViewById(R.id.addWaktuTutup)
         genderRadioGrp = findViewById(R.id.radioGrp)
@@ -50,18 +50,18 @@ class AddToiletActivity: AppCompatActivity() {
 
         btnAddToilet.setOnClickListener{
             val nama = tname.text.toString()
-            val topen = topenTime.text.toString()
-            val tclose = tcloseTime.text.toString()
-            val latitude = currentLatLng.latitude
-            val longitude = currentLatLng.longitude
+            val jam_buka = topenTime.text.toString()
+            val jam_tutup = tcloseTime.text.toString()
+            val latitude = currentLatLng.latitude.toString()
+            val longitude = currentLatLng.longitude.toString()
             val url = "http://10.0.2.2/toilet_finder/toilet/create.php"
 
             val params = HashMap<String,String>()
             params["nama"] = "$nama"
-            params["jam_buka"] = "$topen"
-            params["jam_tutup"] = "$tclose"
+            params["jam_buka"] = "$jam_buka"
+            params["jam_tutup"] = "$jam_tutup"
             params["gender"] = "$gender"
-            params["tipe"] = "$ttype"
+            params["tipe"] = "$tipe"
             params["latitude"] = "$latitude"
             params["longitude"] = "$longitude"
 
@@ -77,7 +77,7 @@ class AddToiletActivity: AppCompatActivity() {
                         if (!response.has("error")) {
 
                             Toast.makeText(this@AddToiletActivity, "$responseMessage", Toast.LENGTH_SHORT).show()
-                            Intent(this, LoginActivity::class.java).also{ startActivity(it)}
+                            Intent(this, MapsActivity::class.java).also{ startActivity(it)}
                         } else {
                             val responseError = response["error"]
                             Toast.makeText(this@AddToiletActivity, "$responseMessage\n$responseError", Toast.LENGTH_SHORT).show()
@@ -93,6 +93,7 @@ class AddToiletActivity: AppCompatActivity() {
                     // Error in request
                     //val errorNetwork = $error["networkResponse"]
                     Toast.makeText(this@AddToiletActivity, "Required field is empty", Toast.LENGTH_SHORT).show()
+                    Intent(this, MapsActivity::class.java).also{ startActivity(it)}
                     Log.e("RESER", "$error")
                 })
 
@@ -148,11 +149,11 @@ class AddToiletActivity: AppCompatActivity() {
             when (view.getId()){
                 R.id.radioPublic ->
                     if (checked){
-                        ttype = "Public"
+                        tipe = "Public"
                     }
                 R.id.radioStaff ->
                     if (checked){
-                        ttype = "Staff"
+                        tipe = "Staff"
                     }
             }
 
