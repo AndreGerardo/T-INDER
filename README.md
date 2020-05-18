@@ -12,7 +12,7 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td>Pascal Pribadi AKhmad P</td>
+            <td>Pascal Pribadi Akhmad P</td>
             <td>G64180022</td>
         </tr>
         <tr>
