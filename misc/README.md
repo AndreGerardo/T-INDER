@@ -38,6 +38,7 @@ Aplikasi ini bertujuan untuk menginformasikan lokasi dan detail jam operasional 
 
 
 ## Deskripsi Perangkat Lunak
+Aplikasi mobile android untuk mencari lokasi toilet umum dan menginformasikan jam operasionalnya di kampus IPB. Detail aplikasi ini meliputi lokasi-lokasi toilet umum, jam operasional, ulasan dan rating dari pengguna.
 
 ## Analisis User
 
