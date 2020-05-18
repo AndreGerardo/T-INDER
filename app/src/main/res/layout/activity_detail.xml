@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvToiletGender" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/backButton"
         android:layout_width="31dp"
         android:layout_height="30dp"
         android:layout_marginTop="28dp"
@@ -120,9 +120,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="322dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="408dp" />
+        android:id="@+id/recycleViewReview"
+        android:layout_width="match_parent"
+        android:layout_height="273dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatAndRev"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

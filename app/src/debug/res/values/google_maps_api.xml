@@ -22,5 +22,5 @@
     -->
 
     <bool name="enable_nearby_search">true</bool>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAXFYnVCRp5zBv3jKRKr_8OGbTTuVartJA</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCsvDA9KKgMEy-KHjvWf0OIZFbPF6RcOrY</string>
 </resources>
