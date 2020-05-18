@@ -34,22 +34,23 @@ Toilet umum merupakan salah satu fasilitas umum yang disediakan oleh IPB. Toilet
 ## Tujuan
 Aplikasi ini bertujuan untuk menginformasikan lokasi dan detail jam operasional untuk mengakses/menggunakan toilet umum di IPB.
 
-##Ruang Lingkup
+## Ruang Lingkup
 
-##Deskripsi Perangkat Lunak
 
-##Analisis User
+## Deskripsi Perangkat Lunak
 
-#User Story
+## Analisis User
 
-##Use Case Diagram
+## User Story
 
-##Use Case Description
+## Use Case Diagram
 
-##Activity Diagram
+## Use Case Description
 
-##Gantt Chart
+## Activity Diagram
 
-##ERD
+## Gantt Chart
 
-#Hasil Implementasi Perangkat Lunak
+## ERD
+
+# Hasil Implementasi Perangkat Lunak
